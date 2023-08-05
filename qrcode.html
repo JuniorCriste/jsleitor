@@ -7,7 +7,7 @@
   <body>
     <video id="preview"></video>
     <script>
-    	var element = document.getElementById('element');
+    	var element = document.getElementById('info');
         let scanner = new Instascan.Scanner(
             {
                 video: document.getElementById('preview')
@@ -21,7 +21,7 @@
         {
             if(cameras.length > 0){
                 scanner.start(cameras[0]);
-                element.innerHTML = '<b>Número de câmeras:</b>' cameras.length;
+                document.body.innerHTML = "<h1>Câmeras: " + cameras.length = "!</h1>";
                 
             } else {
                 console.error("Nenhuma câmera encontrada no dispositivo!");
@@ -30,7 +30,9 @@
     </script>
 
 
+<div id="info">
 
+<br/> </div>
 
  </body>
 </html>
