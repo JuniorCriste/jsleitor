@@ -8,6 +8,9 @@
   <body>
     <video id="preview"></video>
     <script>
+    	let myCam = 0;
+    	</script>
+    	<script>
         let scanner = new Instascan.Scanner(
             {
                 video: document.getElementById('preview')
@@ -20,7 +23,7 @@
         Instascan.Camera.getCameras().then(cameras => 
         {
             if(cameras.length > 0){
-                scanner.start(cameras[0]);
+                scanner.start(cameras[myCam]);
                 document.getElementById("info").innerHTML = "<b>Câmeras:</b> " + cameras.length;
                 
             } else {
@@ -35,25 +38,14 @@
 
 
 <button onclick="MudarCamera()">TROCAR</button>
-<script>
-function MudarCamera() {
-		let scanner = new Instascan.Scanner(
-            {
-                video: document.getElementById('preview')
-            }
-        );
-        scanner.addListener('scan', function(content) {
-            alert('Escaneou o conteudo: ' + content);
-            window.open(content, "_blank");
-        });
-        Instascan.Camera.getCameras().then(cameras => 
-        {
-            if(cameras.length > 0){
-                scanner.start(cameras[1]);   
-            } 
-        });
-}
-</script>
+	<script>
+		if (myCam < cameras.length) {
+		myCam = myCam + 1;
+		} else {
+			myCam = 0;
+			}
+
+	</script>
 
 
 
