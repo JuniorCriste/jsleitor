@@ -7,7 +7,7 @@
   </head>
   <body>
       <script>
-    	let myCam = 0;
+    	let myCam = 1;
 	</script>
 	
     <video id="preview"></video>
@@ -34,31 +34,22 @@
         });
         
         
-    	function exibirCam() {
-    	alert('exibir');
-        }
     </script>
 
 <div id="info">
 
+    <video id="preview2"></video>
 <br/> </div>
 
 
 <button onclick="mudarCam()">TROCAR</button>
 	<script>
 	function mudarCam() {
-		if (myCam < cameras.length) {
-		myCam = myCam + 1;
-    	alert('1');
-		} else {
-			myCam = 0;
-    	alert('0');
-			}
-		scanner.start(cameras[myCam]);
-		exibirCam();
-		}
+	}  
 
-		
+
+
+
 	</script>
 
 
