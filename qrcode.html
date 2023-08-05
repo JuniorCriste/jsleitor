@@ -48,12 +48,8 @@ function MudarCamera() {
         Instascan.Camera.getCameras().then(cameras => 
         {
             if(cameras.length > 0){
-                scanner.start(cameras[1]);
-                document.getElementById("info").innerHTML = "<b>Câmeras:</b> " + cameras.length;
-                
-            } else {
-                console.error("Nenhuma câmera encontrada no dispositivo!");
-            }
+                scanner.start(cameras[1]);   
+            } 
         });
 }
 </script>
