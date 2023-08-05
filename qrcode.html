@@ -8,6 +8,7 @@
   <body>
     <video id="preview"></video>
     <script>
+    function exibirCam(){
     	let myCam = 0;
     	</script>
     	<script>
@@ -30,6 +31,7 @@
                 console.error("Nenhuma câmera encontrada no dispositivo!");
             }
         });
+        }
     </script>
 
 <div id="info">
@@ -37,14 +39,17 @@
 <br/> </div>
 
 
-<button onclick="MudarCamera()">TROCAR</button>
+<button onclick="MudarCam()">TROCAR</button>
 	<script>
+	function mudarCam(){
 		if (myCam < cameras.length) {
 		myCam = myCam + 1;
 		} else {
 			myCam = 0;
 			}
-
+		exibirCam();
+		}
+		
 	</script>
 
 
