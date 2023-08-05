@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=”pt-br”> 
+<html lang="pt-br"> 
   <head>
     <title>Instascan</title>
     <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js" ></script>	
@@ -20,7 +20,7 @@
         {
             if(cameras.length > 0){
                 scanner.start(cameras[0]);
-                document.getElementById("info").innerHTML = "<h1>Câmeras: " + cameras.length + "!</h1>";
+                document.getElementById("info").innerHTML = "<b>Câmeras:</b> " + cameras.length;
                 
             } else {
                 console.error("Nenhuma câmera encontrada no dispositivo!");
@@ -28,10 +28,20 @@
         });
     </script>
 
-
 <div id="info">
 
 <br/> </div>
+
+
+<button onclick="MudarCamera()">Trocar Câmera</button>
+<script>
+function MudarCamera() {
+  scanner.start(cameras[1]);
+}
+</script>
+
+
+
 
  </body>
 </html>
