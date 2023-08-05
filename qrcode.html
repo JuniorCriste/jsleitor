@@ -36,7 +36,25 @@
 <button onclick="MudarCamera()">Trocar Câmera</button>
 <script>
 function MudarCamera() {
-  scanner.start(cameras[1]);
+		let scanner = new Instascan.Scanner(
+            {
+                video: document.getElementById('preview')
+            }
+        );
+        scanner.addListener('scan', function(content) {
+            alert('Escaneou o conteudo: ' + content);
+            window.open(content, "_blank");
+        });
+        Instascan.Camera.getCameras().then(cameras => 
+        {
+            if(cameras.length > 0){
+                scanner.start(cameras[1]);
+                document.getElementById("info").innerHTML = "<b>Câmeras:</b> " + cameras.length;
+                
+            } else {
+                console.error("Nenhuma câmera encontrada no dispositivo!");
+            }
+        });
 }
 </script>
 
