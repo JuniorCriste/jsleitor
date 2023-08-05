@@ -1,4 +1,4 @@
-<h3>Gerador e leitor de QR Code com JavaScript.
-<br/>Junior Criste
-<br/>---</h3>
-<br/><h5>Baseado no projeto de <a href="https://github.com/rcarneironet/qrcode-js">rcarneironet</a></h5>
+<h4>Gerador e leitor de QR Code com JavaScript.</h4>
+<br/><h5>Junior Criste
+<br/><hr/>
+<br/>Baseado no projeto de <a href="https://github.com/rcarneironet/qrcode-js">rcarneironet</a></h5>
