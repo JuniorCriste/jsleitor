@@ -13,7 +13,6 @@
     <video id="preview"></video>
 
     	<script>
-    	function exibirCam() {
         let scanner = new Instascan.Scanner(
             {
                 video: document.getElementById('preview')
@@ -33,6 +32,9 @@
                 console.error("Nenhuma câmera encontrada no dispositivo!");
             }
         });
+        
+        
+    	function exibirCam() {
         }
     </script>
 
