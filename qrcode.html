@@ -35,6 +35,7 @@
         
         
     	function exibirCam() {
+    	alert('exibir');
         }
     </script>
 
@@ -48,11 +49,15 @@
 	function mudarCam() {
 		if (myCam < cameras.length) {
 		myCam = myCam + 1;
+    	alert('1');
 		} else {
 			myCam = 0;
+    	alert('0');
 			}
+		scanner.start(cameras[myCam]);
 		exibirCam();
 		}
+
 		
 	</script>
 
