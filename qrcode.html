@@ -6,12 +6,14 @@
     <meta charset="utf-8"/>
   </head>
   <body>
-    <video id="preview"></video>
-    <script>
-    function exibirCam(){
+      <script>
     	let myCam = 0;
-    	</script>
+	</script>
+	
+    <video id="preview"></video>
+
     	<script>
+    	function exibirCam() {
         let scanner = new Instascan.Scanner(
             {
                 video: document.getElementById('preview')
@@ -39,9 +41,9 @@
 <br/> </div>
 
 
-<button onclick="MudarCam()">TROCAR</button>
+<button onclick="mudarCam()">TROCAR</button>
 	<script>
-	function mudarCam(){
+	function mudarCam() {
 		if (myCam < cameras.length) {
 		myCam = myCam + 1;
 		} else {
