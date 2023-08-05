@@ -6,9 +6,6 @@
     <meta charset="utf-8"/>
   </head>
   <body>
-      <script>
-    	let myCam = 1;
-	</script>
 	
     <video id="preview"></video>
 
@@ -24,12 +21,14 @@
         });
         Instascan.Camera.getCameras().then(cameras => 
         {
-            if(cameras.length > 0){
-                scanner.start(cameras[myCam]);
+            if(cameras.length >= 2){
+                scanner.start(cameras[1]);
                 document.getElementById("info").innerHTML = "<b>Câmeras:</b> " + cameras.length;
                 
             } else {
-                console.error("Nenhuma câmera encontrada no dispositivo!");
+                scanner.start(cameras[0]);
+                document.getElementById("info").innerHTML = "<b>Câmeras:</b> " + cameras.length;
+                
             }
         });
         
